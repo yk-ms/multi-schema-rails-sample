@@ -1,13 +1,15 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: 0
+  pool: 5
   reconnect: true
   username: root
   password:
 
 development:
   <<: *default
+  database: multi_schema_rails_sample_development_fuga
 
 test:
   <<: *default
+  database: multi_schema_rails_sample_test_fuga
