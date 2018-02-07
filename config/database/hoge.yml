@@ -5,3 +5,11 @@ default: &default
   username: root
   password:
   socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: multi-schema-rails-sample_development_hoge
+
+test:
+  <<: *default
+  database: multi-schema-rails-sample_test_hoge
